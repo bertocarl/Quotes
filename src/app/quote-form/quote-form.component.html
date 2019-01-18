@@ -1,73 +1,21 @@
-<!-- <div class="container-fluid">
-    <div class="row">
-        <form #quoteForm='ngForm' (ngSubmit)='submitQuote()' #goalForm='ngForm'>
+<div class="jumbotron">
+  <form (ngSubmit)='submitQuote()' #quoteForm="ngForm">
+    <div class="form-group">
+      <textarea id="" cols="70" rows="5" required #name="ngModel" class="form-control" name="name" [(ngModel)]="newQuote.name">
+      </textarea>
+      <small class="text-danger">Create Quote here</small>
+    </div>
+    <div class="form-group">
+      <label>Author</label>
+      <input type="text" required #author="ngModel" class="form-control" name="author" [(ngModel)]="newQuote.author">
+      <small class="text-danger">Author is Required</small>
+    </div>
 
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text"  class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required>
-
-                <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-                    <p> Name is Required</p>
-                </div>
-              </div>
-            <div class="form-group">
-                        <label for="author">Author</label>
-                        <input type="text"  class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
-
-                <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
-                    <p> Author is Required</p>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="description">Description</label>
-                <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuote.description" name="description" #description="ngModel" required></textarea>
-                <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
-                    <p> Description is Required</p>
-
-                </div>
-
-            </div>
-
-            <div class="form-group">
-                <label for="complete">Completion</label>
-                <input type='date' id="complete" [(ngModel)]="newQuote.completeDate" name="completeDate" #completeDate="ngModel" required >
-                <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
-                    <p> Complete Date is Required</p>
-
-                </div>
-            </div>
-            <button type="Submit" class="btn btn-success btn-lg">Add Quote</button>
-        </form>
-      </div>
-  </div> -->
-
-  <div class="jumbotron">
-
-
-<form  (ngSubmit) = 'submitQuote()' #quoteForm="ngForm">
-
-
-  <div class="form-group">
-    <label>MY QUOTES</label>
-    <textarea id="" cols="70" rows="5" required #quote="ngModel" [class.is-invalid]="quote.invalid && quote.touched" class="form-control" name="quote" [(ngModel)]="makeModel.quote">
-
-</textarea>
-    <small class="text-danger" [class.d-none]="quote.valid || quote.untouched ">Create Quote here</small>
-  </div>
-
-  <div class="form-group">
-    <label>Author</label>
-    <input type="text" required #author="ngModel" [class.is-invalid]="author.invalid && author.touched" class="form-control" name="author" [(ngModel)]="makeModel.author">
-    <small class="text-danger" [class.d-none]="author.valid || author.untouched ">Author is Required</small>
-  </div>
-  <div class="form-group">
-    <label>Publisher</label>
-    <input type="text" required #publisher="ngModel" [class.is-invalid]="publisher.invalid && publisher.touched" class="form-control" name="publisher" [(ngModel)]="makeModel.publisher">
-    <small class="text-danger" [class.d-none]="publisher.valid || publisher.untouched ">Publisher is Required</small>
-  </div>
-  <button [disabled]="quoteForm.form.invalid" class="btn btn-primary" type="submit">Create Quote</button>
-
-
-</form>
+    <div class="form-group">
+      <label>Publisher</label>
+      <input type="text" required #publisher="ngModel" class="form-control" name="publisher" [(ngModel)]="newQuote.publisher">
+      <small class="text-danger">Publisher is Required</small>
+    </div>
+    <button class="btn btn-primary" type="submit">Create Quote</button>
+  </form>
 </div>

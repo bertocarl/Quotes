@@ -6,22 +6,14 @@
     <div class="col-md-6">
       <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
-
     <div class="col-md-6">
-
-      <div *ngFor="let quote of quotes; let i = index" class="quote">
+        <div *ngFor="let quote of quotes; let i = 'index'" class="quote">
         <blockquote appHighlight>
-          <h5> <i class="fas fa-quote-left"></i> {{quote.quote}} <i class="fas fa-quote-right"></i></h5>
-          <br>
-          <br>
-          <button class="btn btn-success" (click)='toggleDetails(i)'>View Details</button>
-          <app-quote-details *ngIf="quotes.showDetails" [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
+          <h1> <i class="fas fa-quote-left"></i> {{quote.name}} <i class="fas fa-quote-right"></i></h1>
+        <app-quote-details [quotes]='quote'></app-quote-details>
           <br>
         </blockquote>
       </div>
-
     </div>
-
   </div>
-
 </div>

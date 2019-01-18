@@ -8,7 +8,7 @@ import {Quote} from '../quote'
 })
 export class QuoteDetailsComponent implements OnInit {
 
-  @Input() quote:Quote;
+  @Input() quotes:Quote;
   @Input() index:number;
   @Output() isComplete= new EventEmitter<boolean>();
 
@@ -18,11 +18,11 @@ export class QuoteDetailsComponent implements OnInit {
 
   upVote = 0;
   downVote = 0;
-   like(){
+   thumbsUp(){
      this.upVote = this.upVote + 1;
    }
-   dislike(){
-     this.downVote = this.downVote + 1;
+   thumbsDown(){
+     this.downVote = this.downVote - 1;
    }
   constructor() { }
 

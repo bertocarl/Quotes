@@ -1,15 +1,27 @@
-
-
 <div class="container">
-    <div class="row" *ngFor="let quote of quotes;let i = 'index'">
-        <div class="row">
+  <br>
+  <h1>MY QUOTES</h1>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    </div>
 
-            <button class="btn btn-primary" (click)='toogleDetails(i)'>Toogle Details</button>
-        </div>
+    <div class="col-md-6">
 
-        <div class="row" *ngIf="quote.showDescription">
-          <app-quote-details  [quote]='quote' (isComplete)= 'deleteQuote($event,i)'></app-quote-details>
-        </div>
-        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+      <div *ngFor="let quote of quotes; let i = index" class="quote">
+        <blockquote appHighlight>
+          <h5> <i class="fas fa-quote-left"></i> {{quote.quote}} <i class="fas fa-quote-right"></i></h5>
+          <br>
+          <br>
+          <button class="btn btn-success" (click)='toggleDetails(i)'>View Details</button>
+          <app-quote-details *ngIf="quotes.showDetails" [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
+          <br>
+        </blockquote>
       </div>
+
+    </div>
+
   </div>
+
+</div>

@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <div class="row">
         <form #quoteForm='ngForm' (ngSubmit)='submitQuote()' #goalForm='ngForm'>
 
@@ -40,4 +40,34 @@
             <button type="Submit" class="btn btn-success btn-lg">Add Quote</button>
         </form>
       </div>
+  </div> -->
+
+  <div class="jumbotron">
+
+
+<form  (ngSubmit) = 'submitQuote()' #quoteForm="ngForm">
+
+
+  <div class="form-group">
+    <label>MY QUOTES</label>
+    <textarea id="" cols="70" rows="5" required #quote="ngModel" [class.is-invalid]="quote.invalid && quote.touched" class="form-control" name="quote" [(ngModel)]="makeModel.quote">
+
+</textarea>
+    <small class="text-danger" [class.d-none]="quote.valid || quote.untouched ">Create Quote here</small>
   </div>
+
+  <div class="form-group">
+    <label>Author</label>
+    <input type="text" required #author="ngModel" [class.is-invalid]="author.invalid && author.touched" class="form-control" name="author" [(ngModel)]="makeModel.author">
+    <small class="text-danger" [class.d-none]="author.valid || author.untouched ">Author is Required</small>
+  </div>
+  <div class="form-group">
+    <label>Publisher</label>
+    <input type="text" required #publisher="ngModel" [class.is-invalid]="publisher.invalid && publisher.touched" class="form-control" name="publisher" [(ngModel)]="makeModel.publisher">
+    <small class="text-danger" [class.d-none]="publisher.valid || publisher.untouched ">Publisher is Required</small>
+  </div>
+  <button [disabled]="quoteForm.form.invalid" class="btn btn-primary" type="submit">Create Quote</button>
+
+
+</form>
+</div>

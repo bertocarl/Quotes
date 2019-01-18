@@ -6,8 +6,8 @@
   <p> Published by:
     {{quotes.publisher}}
   </p>
-  <p>Created on {{quotes.completeDate | dateCount}} ~ {{quotes.completeDate | dateCount}} days ago</p>
-  <button class="button btn btn-danger" id="delete" (click)='quoteDelete(true)'>Delete Quote <i class="fas fa-trash"></i></button>
-  <button class="btn upvote heart" (click)='thumbsUp()'><i class=" fas fa-heart"></i> {{upVote}} </button>
-  <button class="btn downvote heart" (click)='thumbsDown()'><i class="fas fa-heartbeat"></i> {{downVote}}</button>
+  <p>Created on <span>{{quotes.completeDate | timeAgo}}</span></p>
+  <button class="button btn btn-danger" id="delete" (click)='deleteQuote(true)'>Delete Quote </button>
+  <button class="btn upvote" (click)='thumbsUp()'>Like{{upVote}} </button>
+  <button class="btn downvote" (click)='thumbsDown()'>Dislike{{downVote}}</button>
 </footer>

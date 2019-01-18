@@ -1,7 +1,7 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 body {
-  background-color: #2F4858;
+  background-color: #DFDFD0;
 }
 jumbotron{
   background-color:#EDE580;
@@ -31,7 +31,7 @@ width: 50%;
 }
 
 .button {
-  background-color:#AFC2D5 ;
+  background-color:#d9bbf9 ;
   border: none;
   color: #EDE580;
   padding: 10px;

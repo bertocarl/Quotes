@@ -9,12 +9,14 @@ import { HighlightDirective } from './highlight.directive';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { DateCountPipe } from './date-count.pipe';
 import {FormsModule} from '@angular/forms';
+import {TimeAgoPipe} from 'time-ago-pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     QuoteComponent,
+    TimeAgoPipe,
     QuoteDetailsComponent,
     HighlightDirective,
     QuoteFormComponent,

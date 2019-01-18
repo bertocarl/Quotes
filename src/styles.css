@@ -1,13 +1,16 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 body {
-  background-color: #DFDFD0;
+  background-color: #1c1d21;
 }
-jumbotron{
-  background-color:#EDE580;
+form-group{
+  background-color:#1c1d21;
+}
+h1{
+  color: #f45b69;
 }
 h5{
-  color: #EDE580;
+  color: #f45b69;
 }
 .footer{
 float: left;
@@ -17,23 +20,24 @@ width: 50%;
 
 .quote {
   width: auto;
-  border: 5px solid #EDE580;
+  border: 3px solid ;
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 10px;
-  color: white;
+  color: #f45b69;
 }
 .heart{
-  color: white;
+  color: #f45b69;
 }
 .btn {
   margin-bottom: 5px;
+
 }
 
 .button {
   background-color:#d9bbf9 ;
   border: none;
-  color: #EDE580;
+  color: #f45b69;
   padding: 10px;
   text-align: center;
   text-decoration: none;
@@ -44,7 +48,7 @@ width: 50%;
 }
 
 .fa-heart {
-  color: red;
+  color: #f45b69;
 }
 
 .upvote {

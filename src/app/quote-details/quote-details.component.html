@@ -8,6 +8,6 @@
   </p>
   <p>Created on <span>{{quotes.completeDate | timeAgo}}</span></p>
   <button class="button btn btn-danger" id="delete" (click)='deleteQuote(true)'>Delete Quote </button>
-  <button class="btn upvote" (click)='thumbsUp()'>Like{{upVote}} </button>
-  <button class="btn downvote" (click)='thumbsDown()'>Dislike{{downVote}}</button>
+  <button class="btn upvote" (click)='thumbsUp()'><h5>Like{{upVote}} </h5></button>
+  <button class="btn downvote" (click)='thumbsDown()'><h5>Dislike{{downVote}}</h5></button>
 </footer>

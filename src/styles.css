@@ -1,9 +1,12 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 body {
-  background-color: #333;
+  background-color: #2F4858;
 }
-h1{
+jumbotron{
+  background-color:#EDE580;
+}
+h5{
   color: #EDE580;
 }
 .footer{
@@ -28,7 +31,7 @@ width: 50%;
 }
 
 .button {
-  background-color: ;
+  background-color:#AFC2D5 ;
   border: none;
   color: #EDE580;
   padding: 10px;
@@ -61,5 +64,5 @@ width: 50%;
 }
 
 #delete {
-  margin-right: 100px;
+  margin-right: 50px;
 }

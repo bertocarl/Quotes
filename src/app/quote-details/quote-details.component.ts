@@ -12,14 +12,8 @@ export class QuoteDetailsComponent implements OnInit {
   @Input() index: number;
   @Output() isComplete = new EventEmitter<boolean>();
 
-  deleteQuote(isComplete, index) {
-    if (isComplete) {
-      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}`)
-
-      if (toDelete) {
-        this.quotes.splice(index, 1)
-      }
-    }
+  quoteDelete(complete:boolean){
+    this.isComplete.emit(complete);
   }
 
 

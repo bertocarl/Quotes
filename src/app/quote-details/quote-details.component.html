@@ -1,3 +1,18 @@
-<p>{{quote.description}}</p>
+<!-- <p>{{quote.description}}</p>
 <p>{{quote.completeDate|dateCount}} </p>
-<button class="btn btn-danger" (click) = 'quoteDelete(true)'> Delete Quote </button>
+<button class="btn btn-danger" (click) = 'quoteDelete(true)'> Delete Quote </button> -->
+
+
+<footer>
+  <br>
+  <p>Author:
+    {{quote.author}}
+  </p>
+  <p> Published by:
+    {{quote.publisher}}
+  </p>
+  <p>Created on {{quote.completeDate | dateCount}} ~ {{quote.quotedDate | dateCount}} days ago</p>
+  <button class="button btn btn-danger" id="delete" (click)='quoteComplete(true)'>Delete Quote <i class="fas fa-trash"></i></button>
+  <button class="btn upvote" (click)='like()'><i class=" fas fa-heart"></i> {{upVote}} </button>
+  <button class="btn downvote" (click)='dislike()'><i class="fas fa-heartbeat"></i> {{downVote}}</button>
+</footer>
